@@ -1,14 +1,15 @@
-import { icons } from "@/constants/icons";
-import { images } from "@/constants/images";
-import { useRouter } from "expo-router";
-import { ActivityIndicator, FlatList, Image, ScrollView, Text, View } from "react-native";
-import SearchBar from "@/components/SearchBar";
-import { fetchMovies } from "@/services/api";
-import useFetch from "@/services/useFetch";
-import React from "react";
-import MovieCard from "@/components/MovieCard";
-import { getTrendingMovies } from "@/services/appWrite";
-import TrendingCard from "@/components/TrendingCard";
+import { useRouter } from 'expo-router';
+import React from 'react';
+import { ActivityIndicator, FlatList, Image, ScrollView, Text, View } from 'react-native';
+
+import MovieCard from '@/components/MovieCard';
+import SearchBar from '@/components/SearchBar';
+import TrendingCard from '@/components/TrendingCard';
+import { icons } from '@/constants/icons';
+import { images } from '@/constants/images';
+import { fetchMovies } from '@/services/api';
+import { getTrendingMovies } from '@/services/appWrite';
+import useFetch from '@/services/useFetch';
 
 export default function Index() {
   const router = useRouter();
